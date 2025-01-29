@@ -108,5 +108,49 @@ public class App {
         //importante: restas, multiplicaciones, divisiones al concatenarlas con String
         //deben ir en parentesis sino no les va a dejar compilar:
         System.out.println("La resta de "+n1+" menos "+n2+" es "+(n1-n2));
+        
+        //uso de la funciones de la clase Math
+        //pow: elevar un valor base a determinada potencia, trabaja con valores double
+        double numero1 = 2;
+        System.out.println(numero1+" al cuadrado es: "+Math.pow(numero1, 2));
+        System.out.println(numero1+" al cubo es: "+Math.pow(numero1, 3));
+        System.out.println(numero1+" a la quintuple potencia: "+Math.pow(numero1, 5));
+        //la clase Math incluye algunos valores constantes de utilidad
+        System.out.println("El valor de PI es: "+Math.PI);
+        System.out.println("El exponencial es: "+Math.E);
+        System.out.println("El logaritmo de "+numero1+" es: "+Math.log(numero1));
+        
+        //sqrt: calcula la raiz cuadrada de un numero double
+        double numero2 = 81;
+        System.out.println("La raiz cuadrada de "+numero2+" es "+Math.sqrt(numero2));
+        
+        //importante: en JAVA si divide dos numeros sin decimales se considera division entera
+        System.out.println("Division entera de 5 entre 2 es "+(5/2));
+        System.out.println("El residuo de la division entera de 5 entre 2 es "+(5%2));
+        System.out.println("Division con decimales de 5 entre 2 es "+(5.0/2.0));
+        
+        //como obtenemos una raiz cubica
+        double numero3 = 27;
+        System.out.println("La raiz cubica de "+numero3+" es "+Math.pow(numero3, 1.0/3.0));
+        System.out.println("La raiz quinta de "+numero3+" es "+Math.pow(numero3, 1.0/5.0));
+        
+        //redondear al entero mas proximo siempre y cuando su parte decimal supere la mitad
+        double d1 = 6.42, d2 = 4.5, d3 = 7.0001, d4 = 3.0;
+        System.out.println("round de "+d1+" es "+Math.round(d1));
+        System.out.println("round de "+d2+" es "+Math.round(d2));
+        System.out.println("round de "+d3+" es "+Math.round(d3));
+        System.out.println("round de "+d4+" es "+Math.round(d4));
+        
+        //ceil: devuelve el entero superior para el valor double enviado
+        System.out.println("ceil de "+d1+" es "+Math.ceil(d1));
+        System.out.println("ceil de "+d2+" es "+Math.ceil(d2));
+        System.out.println("ceil de "+d3+" es "+Math.ceil(d3));
+        System.out.println("ceil de "+d4+" es "+Math.ceil(d4));
+        
+        //floor: devuelve el entero actual para el valor double enviado
+        System.out.println("floor de "+d1+" es "+Math.floor(d1));
+        System.out.println("floor de "+d2+" es "+Math.floor(d2));
+        System.out.println("floor de "+d3+" es "+Math.floor(d3));
+        System.out.println("floor de "+d4+" es "+Math.floor(d4));
     }
 }
