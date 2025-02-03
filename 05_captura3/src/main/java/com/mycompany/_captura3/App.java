@@ -32,6 +32,29 @@ public class App {
         El descuento es: 0
         El valor a pagar es: 5000*/
         Scanner s = new Scanner(System.in);
+        double venta, descuento = 0;
+        System.out.print("Digitar monto vendido: ");
+        venta = s.nextDouble();
+        
+        //forma 1: calcular el descuento y guardarlo en una variable
+        if( venta > 10000 )
+            descuento = venta*0.20;
+        
+        System.out.println("El descuento es: "+descuento);
+        System.out.println("El valor a pagar es: "+(venta-descuento));
+        
+        //forma 2: calcular directamente en la salida (no se almacena en variable)
+        System.out.print("El descuento es: ");
+        if( venta > 10000 )
+            System.out.println(venta*0.20);
+        else
+            System.out.println(0.00);
+        
+        System.out.print("El valor a pagar es: ");
+        if( venta > 10000 )
+            System.out.println(venta-venta*0.20);
+        else
+            System.out.println(venta);
         
     }
 }
