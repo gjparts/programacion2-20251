@@ -83,6 +83,39 @@ public class App {
         nombre = nombre.trim();
         System.out.println("nombre, variable original: "+nombre);
         System.out.println("nombre, longitud de variable original: "+nombre.length());
+        
+        String mascota1 = "      El Gato Oreo     ";
+        /*Imprimir la variable mascota1; pero sin relleno de espacios, toda en
+        mayusculas y sin alterar a la variable original: utilizando una sola instruccion.*/
+        System.out.println(mascota1.trim().toUpperCase()); //forma 1
+        System.out.println(mascota1.toUpperCase().trim()); //forma 2
+        
+        //Concatenar valores char a un String
+        String universidad = "UNAH";
+        //concatenar char sin afectar a la variable original
+        System.out.println( universidad+'Z' );
+        //concatenar char afectando a la variable original
+        universidad = universidad + 'X';
+        System.out.println( universidad );
+        //concatenar varios char a un String
+        String proveedor = "Intel";
+        proveedor = proveedor + 'W'+ 'X' + 'J';
+        System.out.println( proveedor );
+        //aunque a veces es mas practico concatenar un String
+        String vehiculo = "Toyota";
+        vehiculo = vehiculo + " Corolla";
+        System.out.println( vehiculo );
+        //tambien puede tener el char en una variable
+        char coma = ',';
+        String comida = "Baleada";
+        comida = comida + coma;
+        System.out.println(comida);
+        
+        String nombre1 = "Gerardo Josue Portillo";
+        /*Generar una nueva variable de tipo String que sea una copia
+        de la variable nombre1; pero reemplazando cada espacio en blanco
+        por un asterisco; sin utilizar el metodo replace. Imprimir la
+        nueva variable.*/
     }
 }
 
