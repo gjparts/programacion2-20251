@@ -116,6 +116,40 @@ public class App {
         de la variable nombre1; pero reemplazando cada espacio en blanco
         por un asterisco; sin utilizar el metodo replace. Imprimir la
         nueva variable.*/
+        String copia = "";
+        for (int i = 0; i < nombre1.length(); i++) {
+            if( nombre1.charAt(i) == ' ' )
+                copia = copia + '*';
+            else
+                copia = copia + nombre1.charAt(i);
+        }
+        System.out.println("original: "+nombre1);
+        System.out.println("copia: "+copia);
+        
+        /*Operador Ternario
+        Retorna el resultado de evaluar una o varias condiciones.
+        El resultado tiene dos posibles valores:
+        1) el que tiene que ver con el cumplimiento de las condiciones (true)
+        2) el que no tiene que ver con que se cumplan (false)
+        IMPORTANTE: ambos resultados debe de ser del mismo tipo de dato*/
+        boolean pagaISV = false;
+        float venta = 5000;
+        System.out.println("Valor a pagar: "+( pagaISV == true ? 1.15 : 1 )*venta);
+        
+        float pagar = venta*( pagaISV == true ? 1.15f : 1 );
+        System.out.println("Valor a pagar: "+pagar);
+        System.out.println("Esta pagando ISV? "+( pagaISV == true ? "Si" : "No" ));
+        
+        int rojo = 0, verde = 1;
+        System.out.println("Rojo: "+( rojo == 1 ? "Si" : "No" )+" Verde: "+( verde == 1 ? "Si" : "No" ));
+        
+        //ejercicio del reemplazo por astetiscos usando el operador ternario
+        copia = "";
+        for (int i = 0; i < nombre1.length(); i++)
+            copia = copia + ( nombre1.charAt(i) == ' ' ? '*' : nombre1.charAt(i) );
+        
+        System.out.println("original: "+nombre1);
+        System.out.println("copia: "+copia);
     }
 }
 
