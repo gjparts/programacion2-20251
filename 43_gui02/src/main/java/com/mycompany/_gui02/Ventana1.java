@@ -8,6 +8,7 @@ package com.mycompany._gui02;
  *
  * @author Gerardo
  */
+import javax.swing.JOptionPane;
 public class Ventana1 extends javax.swing.JFrame {
 
     /**
@@ -26,8 +27,15 @@ public class Ventana1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        etiqueta1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        botonTitulo = new javax.swing.JButton();
+        caja1 = new javax.swing.JTextField();
+        boton1 = new javax.swing.JButton();
+        boton2 = new javax.swing.JButton();
+        labelFecha = new javax.swing.JLabel();
+        boton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerardo 20012002049");
@@ -38,17 +46,63 @@ public class Ventana1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setBackground(new java.awt.Color(255, 153, 51));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("UNAH 2025");
-        jLabel1.setToolTipText("Este es un label naranja");
-        jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 0, 0)));
-        jLabel1.setOpaque(true);
+        etiqueta1.setBackground(new java.awt.Color(255, 153, 51));
+        etiqueta1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        etiqueta1.setForeground(new java.awt.Color(255, 255, 255));
+        etiqueta1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        etiqueta1.setText("UNAH 2025");
+        etiqueta1.setToolTipText("Este es un label naranja");
+        etiqueta1.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 0, 0)));
+        etiqueta1.setOpaque(true);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gerardo\\Pictures\\logo.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Programas UNAH\\2025-1\\Programacion II\\43_gui02\\src\\main\\java\\com\\mycompany\\_gui02\\GJParts.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 153, 0));
+        jButton1.setText("Haga Click");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        botonTitulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        botonTitulo.setText("Cambiar Titulo de Ventana");
+        botonTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonTituloActionPerformed(evt);
+            }
+        });
+
+        caja1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        caja1.setForeground(new java.awt.Color(204, 51, 0));
+        caja1.setText("abc");
+        caja1.setToolTipText("");
+
+        boton1.setText("Deshabilitar caja de texto");
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
+
+        boton2.setText("Habilitar caja de texto");
+        boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2ActionPerformed(evt);
+            }
+        });
+
+        labelFecha.setBackground(new java.awt.Color(102, 255, 204));
+        labelFecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        labelFecha.setForeground(new java.awt.Color(0, 102, 255));
+        labelFecha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelFecha.setText("jLabel1");
+        labelFecha.setOpaque(true);
+
+        boton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        boton3.setText("Ver la Fecha y la Hora");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,18 +111,53 @@ public class Ventana1 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(213, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(caja1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(boton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(boton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(etiqueta1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(labelFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(etiqueta1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(boton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(boton2))
+                    .addComponent(caja1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(boton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,6 +167,36 @@ public class Ventana1 extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         this.getContentPane().setBackground( this.getBackground() );
     }//GEN-LAST:event_formWindowOpened
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //mostrar alerta en pantalla
+        JOptionPane.showMessageDialog(this, "Hola Estudiante");
+        //cambiar el texto del label que se llama etiqueta1
+        etiqueta1.setText("Gerardo");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void botonTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonTituloActionPerformed
+        //cambiar el texto del titulo del JFrame
+        this.setTitle("Sistemas UNAH Cortes");
+    }//GEN-LAST:event_botonTituloActionPerformed
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        //impedir usar caja1:
+        //caja1.setEnabled(false);
+        //no permitir la edicion de la caja1:
+        //caja1.setEditable(false);
+        //ocultar caja1:
+        caja1.setVisible(false);
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+        //permitir usar caja1
+        //caja1.setEnabled(true);
+        //permitir la edicion de la caja1:
+        //caja1.setEditable(true);
+        //ocultar caja1:
+        caja1.setVisible(true);
+    }//GEN-LAST:event_boton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,7 +234,14 @@ public class Ventana1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton boton1;
+    private javax.swing.JButton boton2;
+    private javax.swing.JButton boton3;
+    private javax.swing.JButton botonTitulo;
+    private javax.swing.JTextField caja1;
+    private javax.swing.JLabel etiqueta1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel labelFecha;
     // End of variables declaration//GEN-END:variables
 }
