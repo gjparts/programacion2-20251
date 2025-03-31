@@ -9,6 +9,8 @@ package com.mycompany._gui02;
  * @author Gerardo
  */
 import javax.swing.JOptionPane;
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 public class Ventana1 extends javax.swing.JFrame {
 
     /**
@@ -55,7 +57,6 @@ public class Ventana1 extends javax.swing.JFrame {
         etiqueta1.setBorder(javax.swing.BorderFactory.createMatteBorder(4, 4, 4, 4, new java.awt.Color(255, 0, 0)));
         etiqueta1.setOpaque(true);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Programas UNAH\\2025-1\\Programacion II\\43_gui02\\src\\main\\java\\com\\mycompany\\_gui02\\GJParts.jpg")); // NOI18N
         jLabel2.setText("jLabel2");
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -103,6 +104,11 @@ public class Ventana1 extends javax.swing.JFrame {
 
         boton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         boton3.setText("Ver la Fecha y la Hora");
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,6 +203,18 @@ public class Ventana1 extends javax.swing.JFrame {
         //ocultar caja1:
         caja1.setVisible(true);
     }//GEN-LAST:event_boton2ActionPerformed
+
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+        /*Se va a poner la fecha y hora en el label
+        llamado labelFecha usando un formato YYYY/MM/dd */
+        //crear un objeto Calendar con la fecha de la computadora
+        Calendar fecha = Calendar.getInstance();
+        //colocar la fecha y hora del objeto anterior como texto
+        //en labelFecha y usando el formato YYYY/MM/dd
+        //fecha.set(2025, 2, 31, 17, 30, 20);
+        SimpleDateFormat formato = new SimpleDateFormat("YYYY/MM/dd hh:mm:ss a");
+        labelFecha.setText( formato.format(fecha.getTime()) );
+    }//GEN-LAST:event_boton3ActionPerformed
 
     /**
      * @param args the command line arguments
