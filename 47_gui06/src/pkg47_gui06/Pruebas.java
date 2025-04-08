@@ -8,6 +8,9 @@ package pkg47_gui06;
  *
  * @author Gerardo
  */
+import javax.swing.JOptionPane;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.Color;
 public class Pruebas extends javax.swing.JFrame {
 
     /**
@@ -28,8 +31,18 @@ public class Pruebas extends javax.swing.JFrame {
 
         check1 = new javax.swing.JCheckBox();
         label1 = new javax.swing.JLabel();
+        boton1 = new javax.swing.JButton();
+        combo1 = new javax.swing.JComboBox<>();
+        label2 = new javax.swing.JLabel();
+        label3 = new javax.swing.JLabel();
+        boton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         check1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         check1.setText("Soy un checkbox");
@@ -42,27 +55,80 @@ public class Pruebas extends javax.swing.JFrame {
         label1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         label1.setText("jLabel1");
 
+        boton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        boton1.setText("que valor tiene check1?");
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
+
+        combo1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        combo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Verde", "Amarillo", "Azul", "Gris" }));
+        combo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combo1ActionPerformed(evt);
+            }
+        });
+
+        label2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        label2.setText("jLabel1");
+
+        label3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        label3.setText("jLabel1");
+
+        boton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        boton2.setText("Seleccionar a la Pera");
+        boton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(check1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 245, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(label2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(81, 81, 81))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(combo1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(label1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(check1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(boton2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(label3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(check1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(check1)
+                        .addGap(18, 18, 18)
+                        .addComponent(label1)))
                 .addGap(18, 18, 18)
-                .addComponent(label1)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(combo1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                    .addComponent(boton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label3)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -76,6 +142,51 @@ public class Pruebas extends javax.swing.JFrame {
         else
             label1.setText("check1 desmarcado");
     }//GEN-LAST:event_check1ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        //evento disparado al dibujar el JFrame
+        //mandar a llamar la funcion para el evento ActionPerformed de check1:
+        check1ActionPerformed(null);
+        
+        //llenar el combobox combo1 con frutas
+        //crear un objeto para el modelo del combobox
+        DefaultComboBoxModel modelo1 = new DefaultComboBoxModel();
+        //colocar las frutas en el modelo
+        modelo1.addElement("Manzana");
+        modelo1.addElement("Pera");
+        modelo1.addElement("Sandia");
+        modelo1.addElement("Kiwi");
+        modelo1.addElement("Banana");
+        modelo1.addElement("Melon");
+        modelo1.addElement("Naranja");
+        //asignar el modelo al combobox
+        combo1.setModel(modelo1);
+        
+        //ejecutar la funcion del evento ActionPerformed de combo1:
+        combo1ActionPerformed(null);
+    }//GEN-LAST:event_formWindowOpened
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        JOptionPane.showMessageDialog(this, "El valor de check1 es "+check1.isSelected());
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void combo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo1ActionPerformed
+        //obtener los valores del item seleccionado cuando se
+        //cambia de item en combo1
+        label2.setText( "Indice: "+combo1.getSelectedIndex() );
+        label3.setText( "Valor: "+combo1.getSelectedItem() );
+        
+        //si se selecciona a la Pera que coloree el fondo de verde, sino que regrese
+        //el fondo a su color original
+        if( combo1.getSelectedItem().equals("Pera") == true )
+            this.getContentPane().setBackground(Color.green);
+        else
+            this.getContentPane().setBackground(null); //eliminar el color de fondo
+    }//GEN-LAST:event_combo1ActionPerformed
+
+    private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
+        combo1.setSelectedItem("Pera");
+    }//GEN-LAST:event_boton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -113,7 +224,12 @@ public class Pruebas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton1;
+    private javax.swing.JButton boton2;
     private javax.swing.JCheckBox check1;
+    private javax.swing.JComboBox<String> combo1;
     private javax.swing.JLabel label1;
+    private javax.swing.JLabel label2;
+    private javax.swing.JLabel label3;
     // End of variables declaration//GEN-END:variables
 }
